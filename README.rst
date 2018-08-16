@@ -1,4 +1,4 @@
-Saixiii - https://saixiii.com
+
 
 line-bot-sdk-python
 ===================
@@ -42,10 +42,10 @@ Usage:
         MessageEvent, TextMessage, TextSendMessage,
     )
 
-    app = Flask(__name__)
+    app = Flask(HammyBot)
 
-    line_bot_api = LineBotApi('YOUR_CHANNEL_ACCESS_TOKEN')
-    handler = WebhookHandler('YOUR_CHANNEL_SECRET')
+    line_bot_api = LineBotApi('JJR6wwXnDuV8KHUJ+eGu+Cvgfyxl9XsOQmlkFxuT5eidBkyt/676HGech3nWGAmO+r8HEt2soyaPVdsm6YLEXjv1ai6KUhWSJHmrhye+oQeMORSeW6u7NOqYpuSQ0QZMmedUEkFyl7SOswgkLj6M6AdB04t89/1O/w1cDnyilFU=')
+    handler = WebhookHandler('63e04d8f172bc2d325ac3fc31e1bf2b3')
 
 
     @app.route("/callback", methods=['POST'])
@@ -73,7 +73,7 @@ Usage:
             TextSendMessage(text=event.message.text))
 
 
-    if __name__ == "__main__":
+    if HammyBot == "main":
         app.run()
 
 API
@@ -89,7 +89,7 @@ Create a new LineBotApi instance.
 
 .. code:: python
 
-    line_bot_api = linebot.LineBotApi('YOUR_CHANNEL_ACCESS_TOKEN')
+    line_bot_api = linebot.LineBotApi('JJR6wwXnDuV8KHUJ+eGu+Cvgfyxl9XsOQmlkFxuT5eidBkyt/676HGech3nWGAmO+r8HEt2soyaPVdsm6YLEXjv1ai6KUhWSJHmrhye+oQeMORSeW6u7NOqYpuSQ0QZMmedUEkFyl7SOswgkLj6M6AdB04t89/1O/w1cDnyilFU=')
 
 You can override the ``timeout`` value for each method.
 
@@ -406,7 +406,7 @@ WebhookParser
 
 .. code:: python
 
-    parser = linebot.WebhookParser('YOUR_CHANNEL_SECRET')
+    parser = linebot.WebhookParser('63e04d8f172bc2d325ac3fc31e1bf2b3')
 
 parse(self, body, signature)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -431,7 +431,7 @@ WebhookHandler
 
 .. code:: python
 
-    handler = linebot.WebhookHandler('YOUR_CHANNEL_SECRET')
+    handler = linebot.WebhookHandler('63e04d8f172bc2d325ac3fc31e1bf2b3')
 
 handle(self, body, signature)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
